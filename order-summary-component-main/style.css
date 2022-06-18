@@ -1,38 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   word-wrap: break-word;
 }
 
 html, body {
   padding: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
   color: black;
   font-weight: 500;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 900;
-  color: #1f2f56;
+  color: hsl(223deg, 47%, 23%);
 }
 
 h2 {
@@ -43,15 +33,14 @@ h2 {
 p {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #7280a7;
+  color: hsl(224deg, 23%, 55%);
 }
 
 a {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #3829e0;
+  color: hsl(245deg, 75%, 52%);
 }
-
 a:hover {
   opacity: 0.4;
   text-decoration: none;
@@ -63,61 +52,35 @@ a:hover {
   margin: 0;
   width: 100vw;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
   background: url("./images/pattern-background-desktop.svg") no-repeat;
 }
-
 .container .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  -webkit-box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
-          box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
-  -webkit-box-pack: baseline !important;
-      -ms-flex-pack: baseline !important;
-          justify-content: baseline !important;
+  box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
+  justify-content: baseline !important;
   text-align: center;
   border-radius: 1rem;
   background: white;
   width: 40vw;
 }
-
 .container .card .card-header {
-  -webkit-box-align: baseline !important;
-      -ms-flex-align: baseline !important;
-          align-items: baseline !important;
+  align-items: baseline !important;
   padding: 0;
   margin: 0;
   width: 100%;
   top: 0;
 }
-
 .container .card .card-header img {
   top: 0;
   width: 100%;
@@ -125,95 +88,56 @@ a:hover {
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 .container .card .card-body {
   padding: 0.5rem 2rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
 }
-
 .container .card .card-body .order-summary {
-  background-color: #f5f7ff;
+  background-color: hsl(225deg, 100%, 98%);
   border-radius: 20px;
   margin: 1rem;
   padding: 0.3rem;
   float: left;
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
-  -ms-flex-direction: row !important;
-      flex-direction: row !important;
+  flex-direction: row !important;
 }
-
 .container .card .card-body .order-summary .music-icon {
   padding: 0.3rem 0.5rem 0.3rem;
 }
-
 .container .card .card-body .order-summary .plan {
   padding: 0.3rem 0.5rem 0.3rem;
 }
-
 .container .card .card-body .order-summary .plan * {
   padding: 0;
   margin: 0;
 }
-
 .container .card .card-body .order-summary .change {
   padding: 0.3rem 0.5rem 0.3rem 3rem;
 }
-
 .container .card .card-body .button-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
   padding: 10px;
   margin: 20px;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
+  justify-content: space-between !important;
   width: 100%;
 }
-
 .container .card .card-body .button-group .primary {
-  -webkit-box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
-          box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
+  box-shadow: 9px 26px 19px -7px rgba(0, 0, 0, 0.67);
   border: none;
-  background-color: #3829e0;
+  background-color: hsl(245deg, 75%, 52%);
   border-radius: 10px;
   padding: 0.5rem 3rem 0.5rem;
   margin: 10px;
@@ -223,23 +147,20 @@ a:hover {
   font-weight: 900;
   text-decoration: none;
 }
-
 .container .card .card-body .button-group .primary:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-
 .container .card .card-body .button-group .secondary {
   border: none;
   background-color: inherit;
   font-weight: 700;
   font-size: 1rem;
-  color: #7280a7;
+  color: hsl(224deg, 23%, 55%);
 }
-
 .container .card .card-body .button-group .secondary:hover {
   cursor: pointer;
-  color: #1f2f56;
+  color: hsl(223deg, 47%, 23%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -249,5 +170,4 @@ a:hover {
   .container .card {
     width: 90vw;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

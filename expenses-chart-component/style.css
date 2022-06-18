@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "DM Sans", sans-serif;
+  background: hsl(27deg, 66%, 92%);
+}
+
+.container {
+  background: hsl(27deg, 66%, 92%);
+  border-radius: 30px;
+  width: 50vw;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 94vw;
+  }
+}
+.container .bal-header {
+  padding: 20px;
+  border-radius: 10px;
+  background: hsl(10deg, 79%, 65%);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: row;
+}
+.container .bal-header .text {
+  color: hsl(33deg, 100%, 98%);
+  padding: 0;
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-left: 0;
+}
+.container .bal-header .text p {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.container .dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 2px;
+  background: hsl(33deg, 100%, 98%);
+  border-radius: 10px;
+}
+.container .dashboard .dashboard-header {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: hsl(25deg, 47%, 15%);
+}
+.container .dashboard .chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  overflow: hidden;
+  height: 20rem;
+  margin-top: 40px;
+  border-radius: 10px;
+  color: hsl(28deg, 10%, 53%);
+}
+@media screen and (max-width: 700px) {
+  .container .dashboard .chart-container {
+    width: 90vw;
+  }
+}
+.container .dashboard .chart-container #myChart {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 40vw;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: row;
+}
+@media screen and (max-width: 700px) {
+  .container .dashboard .chart-container #myChart {
+    width: 90vw;
+  }
+}
+.container .dashboard .chart-container #myChart .days #wed {
+  background: hsl(186deg, 34%, 60%) !important;
+}
+.container .dashboard .chart-container #myChart .days .tooltip {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 2px;
+  background: hsl(25deg, 47%, 15%);
+  color: hsl(33deg, 100%, 98%);
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.container .dashboard .chart-container #myChart .days .day {
+  border: none;
+  margin: 2px;
+  width: 4vw;
+  border-radius: 10px;
+  background: hsl(10deg, 79%, 65%);
+  color: hsl(10deg, 79%, 65%);
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .container .dashboard .chart-container #myChart .days .day {
+    width: 10vw;
+  }
+}
+.container .dashboard .chart-container #myChart .days .day:hover {
+  opacity: 0.8;
+}
+.container .dashboard hr {
+  width: 96%;
+  text-align: center;
+  height: 0.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(27deg, 66%, 92%);
+}
+.container .dashboard .bill {
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.container .dashboard .bill * {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.container .dashboard .bill * .text {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: hsl(28deg, 10%, 53%);
+}
+.container .dashboard .bill * .numeric {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: hsl(25deg, 47%, 15%);
+}
+.container .dashboard .bill .total .numeric {
+  font-size: 1.4rem !important;
+}/*# sourceMappingURL=style.css.map */

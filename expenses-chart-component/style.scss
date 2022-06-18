@@ -1,0 +1,163 @@
+$primary-red: hsl(10, 79%, 65%);
+$primary-cyan: hsl(186, 34%, 60%);
+$secondary-dark-brown: hsl(25, 47%, 15%);
+$secondary-medium-brown: hsl(28, 10%, 53%);
+$secondary-cream: hsl(27, 66%, 92%);
+$secondary-pale-orange: hsl(33, 100%, 98%);
+$mobile-breakpoint: 700px;
+$font-size-h1: 1.4rem;
+$font-size-p: 0.7rem;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+@mixin flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: row;
+}
+@mixin m-p($value) {
+  margin: $value;
+  padding: $value;
+}
+* {
+  box-sizing: border-box;
+}
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html,
+body {
+  @include m-p(0);
+  @include flex-center-column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "DM Sans", sans-serif;
+  background: $secondary-cream;
+}
+.container {
+  background: $secondary-cream;
+  border-radius: 30px;
+  width: 50vw;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 94vw;
+  }
+  .bal-header {
+    padding: 20px;
+    border-radius: 10px;
+    background: $primary-red;
+    @include flex-row;
+    .text {
+      color: $secondary-pale-orange;
+      padding: 0;
+      font-size: $font-size-p;
+      font-weight: 400;
+      margin-left: 0;
+      p {
+        @include m-p(0);
+        font-weight: 700;
+        font-size: $font-size-h1;
+      }
+    }
+  }
+  .dashboard {
+    @include flex-center-column;
+    margin-top: 20px;
+    padding: 2px;
+    background: $secondary-pale-orange;
+    border-radius: 10px;
+    .dashboard-header {
+      font-weight: 700;
+      font-size: $font-size-h1;
+      color: $secondary-dark-brown;
+    }
+    .chart-container {
+      @include flex-center-column;
+      width: 40vw;
+      overflow: hidden;
+      height: 20rem;
+      margin-top: 40px;
+      border-radius: 10px;
+      color: $secondary-medium-brown;
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 90vw;
+      }
+
+      #myChart {
+        @include m-p(0);
+        @include flex-center-column;
+        height: 100%;
+        width: 40vw;
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 90vw;
+        }
+        text-align: center;
+        @include flex-row;
+        .days {
+          #wed {
+            background: $primary-cyan !important;
+          }
+          .tooltip {
+            opacity: 0;
+            border-radius: 5px;
+            padding: 2px;
+            background: $secondary-dark-brown;
+            color: $secondary-pale-orange;
+            font-weight: 700;
+            font-size: $font-size-p;
+          }
+          .day {
+            border: none;
+            margin: 2px;
+            width: 4vw;
+            border-radius: 10px;
+            background: $primary-red;
+            color: $primary-red;
+            cursor: pointer;
+            @media screen and (max-width: $mobile-breakpoint) {
+              width: 10vw;
+            }
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+    hr {
+      width: 96%;
+      text-align: center;
+      height: 0.1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: $secondary-cream;
+    }
+    .bill {
+      width: 94%;
+      @include flex-row;
+      margin-top: 1rem;
+      * {
+        @include m-p(0);
+        text-align: right;
+        .text {
+          font-size: $font-size-p;
+          font-weight: 400;
+          color: $secondary-medium-brown;
+        }
+        .numeric {
+          font-size: $font-size-p;
+          font-weight: 700;
+          color: $secondary-dark-brown;
+        }
+      }
+      .total {
+        .numeric {
+          font-size: $font-size-h1 !important;
+        }
+      }
+    }
+  }
+}
