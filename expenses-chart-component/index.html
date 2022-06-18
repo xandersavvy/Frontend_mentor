@@ -68,7 +68,6 @@
           return response.json();
         })
         .then(function (data) {
-          let dc;
           for (let i = 0; i < 7; i++) {
             let day = data[i].day;
             let amount = data[i].amount;
