@@ -74,21 +74,21 @@
             let amount = data[i].amount;
             document.getElementById("myChart").innerHTML += `<div class="days">
               <p class="tooltip" id="tooltip-${day}">${amount}</p>
-              <button id="${day}" class="day" onClick="hello(this.id)">
+              <p id="${day}" class="day" onmouseover="showData(this.id)" onmouseout="hideData(this.id)"
+              >
                 &nbsp;
-              </button>
+              </p>
               <p class="text">${day}</p>
             </div>`;
-            amount = amount / 4 + 2;
+            amount = amount / 4;
             document.getElementById(`${day}`).style.height = `${amount}rem`;
           }
         });
-      function hello(id) {
-        if (document.getElementById(`tooltip-${id}`).style.opacity == 1) {
-          document.getElementById(`tooltip-${id}`).style.opacity = 0;
-        } else {
-          document.getElementById(`tooltip-${id}`).style.opacity = 1;
-        }
+      function showData(id) {
+        document.getElementById(`tooltip-${id}`).style.opacity = 1;
+      }
+      function hideData(id) {
+        document.getElementById(`tooltip-${id}`).style.opacity = 0;
       }
     </script>
   </body>
