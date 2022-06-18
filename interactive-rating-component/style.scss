@@ -1,0 +1,148 @@
+$mobile-breakpoint: 700px;
+$orange: hsl(25, 97%, 53%);
+
+$White: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue-comp: hsl(216, 13%, 23%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+@mixin m-p($value) {
+  margin: $value;
+  padding: $value;
+}
+* {
+  box-sizing: border-box;
+}
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html,
+body {
+  @include m-p(0);
+  @include flex-center-column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "Overpass", sans-serif;
+  background-color: $very-dark-blue;
+}
+.container {
+  border-radius: 30px;
+  width: 40vw;
+  padding: 2rem;
+  background-color: $dark-blue;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 94vw;
+  }
+  .logo {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    background: $dark-blue-comp;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $White;
+    @include m-p(0.5rem);
+  }
+  p {
+    @include m-p(0.5rem);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $light-grey;
+  }
+  .rating-stars {
+    @include m-p(0.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row;
+
+    label {
+      @include m-p(0.5rem);
+      @include flex-center-column;
+      width: 2rem;
+      height: 2rem;
+      font-size: 0.8rem;
+      border-radius: 50px;
+      background-color: $dark-blue-comp;
+      color: $light-grey;
+      p {
+        @include m-p(0.6rem);
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+        border-radius: 50px;
+      }
+      cursor: pointer;
+      input {
+        display: none;
+        &:checked + p {
+          width: 2rem;
+          height: 2rem;
+          font-size: 0.8rem;
+          border-radius: 50px;
+          background-color: $light-grey;
+          color: $White;
+        }
+      }
+      &:hover {
+        background-color: $orange;
+        color: $White;
+      }
+    }
+  }
+  button {
+    background-color: $orange;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: $White;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+      background-color: $White;
+      color: $orange;
+    }
+  }
+  .thanku-image {
+    width: 100%;
+    @include m-p(0.5rem);
+    @include flex-center-column;
+    img {
+      width: 10rem;
+      height: 100%;
+    }
+  }
+}
+.thankyou-state {
+  @include m-p(2rem);
+  @include flex-center-column;
+  text-align: center;
+
+  .rating-text {
+    @include m-p(0.5rem);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $orange;
+    background-color: $dark-blue-comp;
+    border-radius: 20px;
+  }
+}

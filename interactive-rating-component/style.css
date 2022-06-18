@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216deg, 12%, 8%);
+}
+
+.container {
+  border-radius: 30px;
+  width: 40vw;
+  padding: 2rem;
+  background-color: hsl(213deg, 19%, 18%);
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 94vw;
+  }
+}
+.container .logo {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50px;
+  background: hsl(216deg, 13%, 23%);
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+}
+.container .logo img {
+  width: 100%;
+  height: 100%;
+}
+.container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.container p {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(217deg, 12%, 63%);
+}
+.container .rating-stars {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: row;
+}
+.container .rating-stars label {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  background-color: hsl(216deg, 13%, 23%);
+  color: hsl(217deg, 12%, 63%);
+  cursor: pointer;
+}
+.container .rating-stars label p {
+  margin: 0.6rem;
+  padding: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+}
+.container .rating-stars label input {
+  display: none;
+}
+.container .rating-stars label input:checked + p {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+.container .rating-stars label:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.container button {
+  background-color: hsl(25deg, 97%, 53%);
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.container .thanku-image {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .thanku-image img {
+  width: 10rem;
+  height: 100%;
+}
+
+.thankyou-state {
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.thankyou-state .rating-text {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(216deg, 13%, 23%);
+  border-radius: 20px;
+}/*# sourceMappingURL=style.css.map */
