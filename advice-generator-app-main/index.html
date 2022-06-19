@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- <meta http-equiv="refresh" content="1" /> -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: 10px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1 class="id">A D V I C E #</h1>
+      <p class="quote">""</p>
+      <div class="divider">
+        <img src="./images/pattern-divider-desktop.svg" alt="" />
+      </div>
+      <button id="reload" onClick="adviceGen()">
+        <img
+          src="./images/icon-dice.svg"
+          alt="Dice reload"
+          srcset="Dice reload"
+        />
+        &nbsp;
+      </button>
+    </div>
+    <script>
+      let url = "https://api.adviceslip.com/advice";
+      let id = document.querySelector(".id");
+      let quote = document.querySelector(".quote");
+      let btn = document.getElementById("reload");
+      function adviceGen() {
+        fetch(url)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            id.innerHTML = `A D V I C E #${data.slip.id}`;
+            quote.innerHTML = `"${data.slip.advice}"`;
+          })
+          .catch(function (err) {
+            console.err(err);
+          });
+        let rect = document.getElementById("container").getBoundingClientRect();
+        btn.style.top = rect.bottom - 25 + "px";
+        btn.style.left = (rect.right + rect.left) / 2 - 25 + "px";
+        btn.style.bottom = rect.bottom + 25 + "px";
+        btn.style.right = (rect.right + rect.left) / 2 + 25 + "px";
+      }
+      adviceGen();
+    </script>
+  </body>
+</html>

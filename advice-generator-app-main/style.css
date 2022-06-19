@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "Manrope", sans-serif;
+  background: hsl(218deg, 23%, 16%);
+  color: hsl(193deg, 38%, 86%);
+  font-weight: 800;
+}
+
+.container {
+  margin: 2rem;
+  padding: 2rem;
+  background: hsl(217deg, 19%, 24%);
+  border-radius: 20px;
+  width: 40vw;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 94vw;
+  }
+}
+.container h1 {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: hsl(150deg, 100%, 66%);
+}
+.container p {
+  font-size: 1.5rem;
+}
+.container .divider {
+  margin: 0rem;
+  padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container .divider img {
+  width: 80%;
+}
+.container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  left: 45vw;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: hsl(150deg, 100%, 66%);
+  border-radius: 50%;
+}
+.container button img {
+  text-align: center;
+  margin: 0rem;
+  padding: 0rem;
+  width: 50%;
+  height: 60%;
+}/*# sourceMappingURL=style.css.map */

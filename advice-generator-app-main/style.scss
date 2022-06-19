@@ -1,0 +1,80 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+$mobile-breakpoint: 700px;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+@mixin m-p($value) {
+  margin: $value;
+  padding: $value;
+}
+* {
+  box-sizing: border-box;
+}
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html,
+body {
+  @include m-p(0);
+  @include flex-center-column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: "Manrope", sans-serif;
+  background: $dark-blue;
+  color: $light-cyan;
+  font-weight: 800;
+}
+.container {
+  @include m-p(2rem);
+  background: $dark-grayish-blue;
+  border-radius: 20px;
+  width: 40vw;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 94vw;
+  }
+  h1 {
+    @include m-p(1rem);
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-align: center;
+    color: $neon-green;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .divider {
+    @include m-p(0rem);
+    @include flex-center-column;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  button {
+    @include flex-center-column;
+    @include m-p(0);
+    padding-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 45vw;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: $neon-green;
+    border-radius: 50%;
+    img {
+      text-align: center;
+      @include m-p(0rem);
+      width: 50%;
+      height: 60%;
+    }
+  }
+}
